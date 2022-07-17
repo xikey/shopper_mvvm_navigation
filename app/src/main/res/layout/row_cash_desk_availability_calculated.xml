@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/lyContainer"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/lyRoot"
+        android:background="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:layout_marginLeft="5dp"
+        app:cardBackgroundColor="#fefefe"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgReturned"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/txtPaymentType"
+                android:rotation="270"
+                android:textSize="@dimen/normal_font_size"
+                android:text="..."
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toLeftOf="@id/imgReturned"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="شماره پیگیری:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="بانک:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="شماره حساب:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="فروش:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtSale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="برگشتی:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtReturn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="خالص فروش:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtNetSale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="موجودی اعلام شده:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtUserAvailability"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingRight="10dp"
+                        android:text="مغایرت:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                    <TextView
+                        android:id="@+id/txtDifference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_font_size" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

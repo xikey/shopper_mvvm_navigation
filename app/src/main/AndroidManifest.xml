@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zikey.android.razanstoreapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RazanStoreApp">
+        <activity
+            android:name="com.zikey.android.razanstoreapp.ui.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.RazanStoreApp.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name="com.zikey.android.razanstoreapp.ui.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RazanStoreApp.NoActionBar">
+            <intent-filter>
+                <action android:theme="@style/Theme.RazanStoreApp.NoActionBar"
+                    android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zikey.android.razanstoreapp.ui.activities.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.RazanStoreApp.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+       android:layoutDirection="rtl"
+    android:id="@+id/lyBackground"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:textSize="@dimen/very_small_font_size"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:textColor="@color/black"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:textColor="@color/black"
+        android:id="@+id/txtTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.20"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:id="@+id/txtThree"
+        android:textColor="@color/black"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:id="@+id/txtFour"
+        android:layout_width="60dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:id="@+id/txtFive"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.20"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:src="@drawable/dash_line_png" />
+
+</LinearLayout>

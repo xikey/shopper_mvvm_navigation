@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.FinalizeCashDeskFragment">
+
+    <LinearLayout
+        android:id="@+id/lyTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?actionBarSize"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/payment_type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/bank"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/account_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/cash_desk_availability"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSend"
+        android:layout_below="@id/lyTop" />
+
+
+    <Button
+        android:id="@+id/btnSend"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/save_factor_and_calculate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font_size"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="0dp"
+        app:strokeColor="@color/colorAccent" />
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="6dp" />
+
+    <include
+        android:id="@+id/lyProgres"
+        layout="@layout/layout_progress_match_parent_with_title" />
+
+
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.NewFactorFragment">
+
+    <LinearLayout
+        android:id="@+id/lyTop"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Theme.App.White.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="@string/customer_tel"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:theme="@style/Theme.App.White.Text"
+                app:boxStrokeColor="@color/colorAccent"
+                app:counterTextColor="@color/colorAccent"
+                app:errorTextAppearance="@style/ErrorTextAppearance"
+                app:hintTextColor="@color/colorAccent"
+                app:startIconDrawable="@drawable/ic_round_contact_phone_24"
+                app:startIconTint="@color/colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCustomerTel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorAccent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/row"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/barcode"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/fi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/count"
+                android:textColor="@color/white"
+                android:textSize="@dimen/very_small_10" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvItems"
+        android:layout_above="@id/button"
+        android:layout_below="@id/lyTop"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/txtError"
+        android:text="@string/factor_is_empty"
+        android:textSize="@dimen/small_font_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/save_factor_and_continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_font_size"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="0dp"
+        app:strokeColor="@color/colorAccent" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_select_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FAAB1A"
+        android:contentDescription="@string/add_product"
+        android:elevation="6dp"
+        android:text="@string/add_product"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_round_add_white_24"
+        app:iconTint="@color/white" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="6dp" />
+
+    <include android:id="@+id/lyProgres" layout="@layout/layout_progress_match_parent_with_title"/>
+
+</RelativeLayout>

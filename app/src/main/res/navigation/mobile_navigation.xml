@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_newFactorFragment"
+            app:destination="@id/newFactorFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_finalizeCashDeskFragment"
+            app:destination="@id/finalizeCashDeskFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_kardexFragment"
+            app:destination="@id/kardexFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newFactorFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.NewFactorFragment"
+        android:label="@string/menu_new_factor"
+        tools:layout="@layout/fragment_new_factor">
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_newFactorFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+        <action
+            android:id="@+id/action_newFactorFragment_to_selectProductFragment"
+            app:destination="@id/selectProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.OrdersFragment"
+        android:label="@string/orders_fragment_label"
+        tools:layout="@layout/orders_fragment">
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_dismiss" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.OrderDetailsFragment"
+        android:label="@string/order_details_fragment"
+        tools:layout="@layout/order_details_fragment" >
+
+        <argument
+            android:name="factorId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_selectProductFragment"
+            app:destination="@id/selectProductFragment" />
+
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_dismiss" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectProductFragment"
+        tools:layout="@layout/fragment_select_product"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.SelectProductFragment"
+        android:label="@string/SelectProductFragment" >
+
+        <argument
+            android:name="factorId"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.PaymentFragment"
+        android:label="@string/payment_fragment_lable"
+        tools:layout="@layout/payment_fragment" >
+
+        <argument
+            android:name="factorId"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+        <argument
+            android:name="factorTotalPrice"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+        <action
+            app:popUpTo="@id/orderDetailsFragment"
+            android:id="@+id/action_dismiss" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/finalizeCashDeskFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.FinalizeCashDeskFragment"
+        android:label="بستن صندوق"
+        tools:layout="@layout/finalize_cash_desk_fragment" >
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_dismiss" />
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_finalizeCashDeskFragment_to_finalizeCashDeskCalculatedFragment"
+            app:destination="@id/finalizeCashDeskCalculatedFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/finalizeCashDeskCalculatedFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.FinalizeCashDeskCalculatedFragment"
+        android:label="finalize_cash_desk_calculated_fragment"
+        tools:layout="@layout/finalize_cash_desk_calculated_fragment" >
+
+        <argument
+            android:name="cashDeskId"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+        <argument
+            android:name="date"
+            app:argType="string"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/kardexFragment"
+        android:name="com.zikey.android.razanstoreapp.ui.fragments.KardexFragment"
+        android:label="کارت انبار و کاردکس"
+        tools:layout="@layout/content_kardex" />
+
+
+</navigation>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.OrdersFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="6dp" />
+
+    <LinearLayout
+        android:id="@+id/lyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/factor_id_header"
+            android:textColor="@color/white"
+            android:textSize="@dimen/very_small_10" />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/mobile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/very_small_10" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="تاریخ ثبت"
+            android:textColor="@color/white"
+            android:textSize="@dimen/very_small_10" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/cost"
+            android:textColor="@color/white"
+            android:textSize="@dimen/very_small_10" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:paddingBottom="5dp" />
+
+        <include android:id="@+id/lyProgres" layout="@layout/layout_progress_match_parent_with_title"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+
+

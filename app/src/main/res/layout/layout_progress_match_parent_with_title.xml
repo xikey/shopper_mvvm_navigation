@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyProgress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ProgressBar
+        android:theme="@style/Theme.RazanStoreApp"
+        style="@style/Theme.RazanStoreApp"
+        android:id="@+id/indeterminateBar"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+
+
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/txtSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/please_wait"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/normal_font_size" />
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+       android:layoutDirection="rtl"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:textSize="@dimen/very_small_font_size"
+        android:layout_width="25dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:textColor="@color/black"
+        android:id="@+id/txtTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:textColor="@color/black"
+        android:id="@+id/txtThree"
+        android:layout_width="match_parent"
+        android:layout_weight="0.33"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black" />
+
+    <TextView
+        android:textSize="@dimen/very_small_font_size"
+        android:textColor="@color/black"
+        android:id="@+id/txtFour"
+        android:layout_width="match_parent"
+        android:layout_weight="0.33"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingLeft="2dp"
+        android:paddingTop="8dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="8dp" />
+
+
+    <ImageView
+        android:scaleType="center"
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="@color/black" />
+
+</LinearLayout>
